@@ -113,10 +113,10 @@ func main() {
 	wg.Wait()
 
 	// 保存文件
-	fileName := fmt.Sprintf("船票-%v.xlsx", time.Now().Format("20060102150405"))
+	fileName := fmt.Sprintf("船员-%v.xlsx", time.Now().Format("20060102150405"))
 	fmt.Println("")
 	if err = f.SaveAs(fileName); err != nil {
-		fmt.Println("表格保存失败，请确认表格处于未打开，", err.Error())
+		fmt.Println("保存失败，", err.Error())
 	} else {
 		fmt.Println("读取完成，数据已保存到", fileName)
 	}
